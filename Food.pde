@@ -1,4 +1,5 @@
 public class Food {
+  Food f1;
   public PVector pos;
   public final int SIZE = 10;
   public final color COLOR = color(90, 252, 3);
@@ -12,5 +13,6 @@ public class Food {
   public void show() {
     fill(COLOR);
     circle(pos.x, pos.y, SIZE);
+   
   }
 }
