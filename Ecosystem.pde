@@ -2,7 +2,7 @@ Creature[] c1 = new Creature[10];
 int x;
 int y;
 int vx, vy;
-Food[] f1 = new Food[40];
+Food[] f1 = new Food[75];
 public void setup() {
   size(800, 800);
   spawnCreature();
@@ -14,23 +14,25 @@ public void setup() {
 }
 
 public void draw() {
-  background(220);
+  background(0);
   for (int i = 0; i < c1.length; i++) {
     if (c1[i].active == false)
       continue;
-    c1[i].show();
+      if (c1[i].active){
+        c1[i].show();
+      }
     c1[i].move();
     for (int j = 0; j < f1.length; j++) {
       Food onef1 = f1 [j];
       c1[i].collides(onef1);
     }
-    for (int j = 0; j < f1.length; j++) {
+    
+  }
+  for (int j = 0; j < f1.length; j++) {
       if (f1[j].active)
         f1[j].show();
-    }
-  }
 }
-
+}
 
 private void spawnFood() {
   for (int i = 0; i < f1.length; i++) {

@@ -2,7 +2,7 @@ public class Food {
   Food f1;
   public PVector pos;
   public final int SIZE = 10;
-  public final color COLOR = color(90, 252, 3);
+  public final color COLOR = color(44, 34, 230);
   public int health = (int)random(1, 5);
   public boolean active = true;
 
