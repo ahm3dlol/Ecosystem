@@ -1,8 +1,8 @@
-Creature[] c1 = new Creature[10];
+Creature[] c1 = new Creature[15];
 int x;
 int y;
 int vx, vy;
-Food[] f1 = new Food[75];
+Food[] f1 = new Food[100];
 public void setup() {
   size(800, 800);
   spawnCreature();
